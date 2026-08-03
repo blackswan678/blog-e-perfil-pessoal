@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog & Sobre Mim</title>
+    <!-- Vinculação do arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Blog & Perfil Pessoal</h1>
+        <p>Notícias, tecnologia e um pouco sobre minha trajetória!</p>
+    </header>
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#posts">Postagens</a>
+        <a href="#sobre">Sobre Mim</a>
+        <button id="btn-tema" class="nav-btn">Modo Escuro</button>
+    </nav>
+
+    <!-- Contêiner Flexbox do Layout -->
+    <div class="row">
+        
+        <!-- Barra Lateral: Seção Sobre Mim -->
+        <aside id="sobre">
+            <h2>Sobre Mim</h2>
+            <div class="fakeimg" style="height: 150px; text-align: center; line-height: 150px;">
+                Fotinha
+            </div>
+            <p><strong>Jonathan Willian</strong></p>
+            <p>Analista de Sistemas apaixonado por criar soluções que fazem a diferença no mundo.</p>
+
+            <h5>Tecnologias Que Utilizo</h5>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Flutter</li>
+                <li>Dart</li>
+            </ul>
+
+            <h5>Minhas Formações</h5>
+            <ol>
+                <li>Tec. Desenvolvimento Web e de Jogos</li>
+                <li>Grad. Sistemas de Informação</li>
+                <li>Esp. Desenvolvimento Web</li>
+                <li>Pós. Cientista de Dados</li>
+            </ol>
+
+            <h5>Redes Sociais</h5>
+            <div class="social-links">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://medium.com" target="_blank">Medium</a>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal: Postagens do Blog -->
+        <main id="posts">
+            
+            <article class="card">
+                <h2>CRIANDO SITES COM HTML, CSS E JAVASCRIPT</h2>
+                <h5>Jonathan Willian, 15 de Outubro, 2024</h5>
+                <div class="fakeimg" style="height: 200px; text-align: center; line-height: 200px;">
+                    Imagem da Postagem
+                </div>
+                <p>
+                    A combinação entre HTML semântico, estilização com CSS e dinamismo com JavaScript 
+                    é a base para o desenvolvimento web moderno.
+                </p>
+                <button class="btn-curtir">❤️ Curtir (<span class="count">0</span>)</button>
+            </article>
+
+            <article class="card">
+                <h2>POR QUE APRENDER DESENVOLVIMENTO WEB?</h2>
+                <h5>Jonathan Willian, 10 de Outubro, 2024</h5>
+                <div class="fakeimg" style="height: 200px; text-align: center; line-height: 200px;">
+                    Imagem da Postagem
+                </div>
+                <p>
+                    O mercado de tecnologia cresce a cada dia e dominar o desenvolvimento front-end abre portas 
+                    para diversos projetos incríveis e oportunidades profissionais.
+                </p>
+                <button class="btn-curtir">❤️ Curtir (<span class="count">0</span>)</button>
+            </article>
+
+        </main>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por Jonathan Willian - Todos os Direitos Reservados - 2024</p>
+    </footer>
+
+    <!-- Vinculação do arquivo JavaScript separado -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* RESET E ESTILOS GERAIS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 60px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+/* ESTILO DA BARRA DE NAVEGAÇÃO */
+nav {
+    display: flex;
+    background-color: #333333;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #dddddd;
+    color: #000000;
+}
+
+.nav-btn {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 8px 16px;
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #16a085;
+}
+
+/* LAYOUT DE COLUNAS (FLEXBOX) */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* BARRA LATERAL (ASIDE - SOBRE MIM) */
+aside {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside h2, aside h5 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+aside ul, aside ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* CONTEÚDO PRINCIPAL (MAIN - POSTAGENS) */
+main {
+    flex: 70%;
+    padding: 0 0 0 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #333333;
+}
+
+.card h5 {
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+/* CLASSE DE IMAGEM FICTÍCIA */
+.fakeimg {
+    background-color: #aaaaaa;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* BOTÃO DE CURTIR */
+.btn-curtir {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: transform 0.1s ease;
+}
+
+.btn-curtir:active {
+    transform: scale(0.95);
+}
+
+/* RODAPÉ */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd;
+    margin-top: 20px;
+}
+
+/* REGRA DO MODO ESCURO */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f4f4f9;
+}
+
+body.dark-mode aside {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .card {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-mode .card h2 {
+    color: #1abc9c;
+}
+
+body.dark-mode .card h5 {
+    color: #bbb;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+    color: #aaa;
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    main {
+        padding: 20px 0 0 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        margin: 10px auto;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. CONTADOR DE CURTIDAS NAS POSTAGENS
+    const botoesCurtir = document.querySelectorAll(".btn-curtir");
+
+    botoesCurtir.forEach((botao) => {
+        let contador = 0;
+        const contadorSpan = botao.querySelector(".count");
+
+        botao.addEventListener("click", () => {
+            contador++;
+            contadorSpan.textContent = contador;
+        });
+    });
+
+    // 2. ALTERNÂNCIA DE TEMA (MODO CLARO / ESCURO)
+    const btnTema = document.getElementById("btn-tema");
+
+    btnTema.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            btnTema.textContent = "Modo Claro";
+        } else {
+            btnTema.textContent = "Modo Escuro";
+        }
+    });
+
+});
